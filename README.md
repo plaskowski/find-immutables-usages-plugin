@@ -14,6 +14,7 @@ Related:
 - https://github.com/immutables/immutables/issues/904
 - com.intellij.find.actions.FindUsagesAction
 - Template ToDo list (see initial commit)
+- https://github.com/mapstruct/mapstruct-idea
 
 ## Installation
 
