@@ -18,6 +18,7 @@ Related:
 - JavaFindUsagesHandler#getSecondaryElements()
 - https://plugins.jetbrains.com/docs/intellij/psi-cookbook.html#java-specific
 - com.intellij.find.findUsages.CustomUsageSearcher
+- https://plugins.jetbrains.com/docs/intellij/find-usages.html
 
 ## Installation
 
