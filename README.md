@@ -16,6 +16,8 @@ Related:
 - Template ToDo list (see initial commit)
 - https://github.com/mapstruct/mapstruct-idea
 - JavaFindUsagesHandler#getSecondaryElements()
+- https://plugins.jetbrains.com/docs/intellij/psi-cookbook.html#java-specific
+- com.intellij.find.findUsages.CustomUsageSearcher
 
 ## Installation
 
