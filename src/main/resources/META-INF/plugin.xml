@@ -1,13 +1,16 @@
 <idea-plugin>
     <id>com.github.plaskowski.findimmutablesusagesplugin</id>
-    <name>find-immutables-usages-plugin</name>
+    <name>Immutables.org Support</name>
     <vendor>plaskowski</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <findUsagesHandlerFactory
+            implementation="com.github.plaskowski.findimmutablesusagesplugin.ImmutablePropertyFindUsagesHandlerFactory"/>
     </extensions>
 
 </idea-plugin>

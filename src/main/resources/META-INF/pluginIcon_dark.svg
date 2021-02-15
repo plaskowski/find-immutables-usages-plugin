@@ -77,13 +77,13 @@
       <g class="com.sun.star.drawing.TextShape">
        <g id="id3">
         <rect class="BoundingBox" stroke="none" fill="none" x="4385" y="9615" width="19714" height="8134"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="7056px" font-weight="400"><tspan class="TextPosition" x="4635" y="16128"><tspan fill="rgb(0,0,0)" stroke="none">immut</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="7056px" font-weight="400"><tspan class="TextPosition" x="4635" y="16128"><tspan fill="rgb(153,153,153)" stroke="none">immut</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id4">
         <rect class="BoundingBox" stroke="none" fill="none" x="24098" y="12311" width="7255" height="6560"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="2822px" font-weight="400"><tspan class="TextPosition" x="24348" y="14993"><tspan fill="rgb(0,0,0)" stroke="none">ables</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="2822px" font-weight="400"><tspan class="TextPosition" x="26237" y="18147"><tspan fill="rgb(0,0,0)" stroke="none">.org</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="2822px" font-weight="400"><tspan class="TextPosition" x="24348" y="14993"><tspan fill="rgb(153,153,153)" stroke="none">ables</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="2822px" font-weight="400"><tspan class="TextPosition" x="26237" y="18147"><tspan fill="rgb(153,153,153)" stroke="none">.org</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="Group">
