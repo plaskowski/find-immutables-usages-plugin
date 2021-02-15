@@ -15,6 +15,7 @@ Related:
 - com.intellij.find.actions.FindUsagesAction
 - Template ToDo list (see initial commit)
 - https://github.com/mapstruct/mapstruct-idea
+- JavaFindUsagesHandler#getSecondaryElements()
 
 ## Installation
 
