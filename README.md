@@ -21,6 +21,7 @@ Related:
 - https://plugins.jetbrains.com/docs/intellij/find-usages.html
 - https://plugins.jetbrains.com/intellij-platform-explorer
 - [scala plugin](https://github.com/JetBrains/intellij-scala/blob/3b5c8039c90d315f53a258ca58a3b237949eeebc/scala/scala-impl/resources/META-INF/scala-plugin-common.xml)
+- my question on Slack https://jetbrains-platform.slack.com/archives/C5U8BM1MK/p1613464009450100
 
 ## Installation
 
