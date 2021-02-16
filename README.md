@@ -20,6 +20,7 @@ Related:
 - com.intellij.find.findUsages.CustomUsageSearcher
 - https://plugins.jetbrains.com/docs/intellij/find-usages.html
 - https://plugins.jetbrains.com/intellij-platform-explorer
+- [scala plugin](https://github.com/JetBrains/intellij-scala/blob/3b5c8039c90d315f53a258ca58a3b237949eeebc/scala/scala-impl/resources/META-INF/scala-plugin-common.xml)
 
 ## Installation
 
