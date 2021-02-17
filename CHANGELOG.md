@@ -3,6 +3,18 @@
 # find-immutables-usages-plugin Changelog
 
 ## [Unreleased]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.3.0]
 
 ### Added
 - Enhance 'Find Usages' action on property getter in interface/abstract class
