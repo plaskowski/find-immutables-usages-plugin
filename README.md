@@ -1,8 +1,8 @@
 # find-immutables-usages-plugin
 
 ![Build](https://github.com/plaskowski/find-immutables-usages-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/16135)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/16135)
 
 ## About
 
@@ -26,8 +26,9 @@ This IntelliJ Plugin helps with [immutables.org](http://immutables.github.io/) b
 
 ## Roadmap
 
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
+- [X] ~~Set the Plugin ID in the above README badges.~~
+- [X] ~~Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).~~
+- [ ] support other features like @Builder.Constructor, @Builder.Factory, @Value.Style
 
 ## Related resources
 
