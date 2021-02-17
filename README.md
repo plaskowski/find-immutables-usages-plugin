@@ -12,6 +12,8 @@ This IntelliJ Plugin helps with [immutables.org](http://immutables.github.io/) b
 **Note** this is not an official immutables.org plugin (there was no official plugin as of Feb 2021).
 <!-- Plugin description end -->
 
+![Example](example_screenshot.png)
+
 ## Installation
 
 - Using IDE built-in plugin system:
