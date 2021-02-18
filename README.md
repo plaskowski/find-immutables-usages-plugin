@@ -1,8 +1,8 @@
 # find-immutables-usages-plugin
 
 ![Build](https://github.com/plaskowski/find-immutables-usages-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/16135)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/16135)
+[![Version](https://img.shields.io/jetbrains/plugin/v/16135.svg)](https://plugins.jetbrains.com/plugin/16135)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/16135.svg)](https://plugins.jetbrains.com/plugin/16135)
 
 ## About
 
