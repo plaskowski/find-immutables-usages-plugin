@@ -30,7 +30,12 @@ This IntelliJ Plugin helps with [immutables.org](http://immutables.github.io/) b
 
 - [X] ~~Set the Plugin ID in the above README badges.~~
 - [X] ~~Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).~~
-- [ ] support other features like @Builder.Constructor, @Builder.Factory, @Value.Style
+- [ ] support other features like:
+  - @Builder.Constructor,
+  - @Builder.Factory, 
+  - @Value.Style
+- [ ] support less common cases like:
+  - having ``@Value.Immutable`` on interface that extends the public interface (the one containing properties signatures)
 
 ## Related resources
 
