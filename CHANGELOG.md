@@ -3,6 +3,18 @@
 # find-immutables-usages-plugin Changelog
 
 ## [Unreleased]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.3.1]
 ### Fixed
 - Exclude unrelated methods like hasCode() by checking parameters count
 
