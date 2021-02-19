@@ -1,0 +1,27 @@
+
+# Imports
+
+import org.immutables.builder.Builder;
+import org.immutables.serial.Serial;
+import org.immutables.value.Generated;
+import org.immutables.value.Value;
+import org.immutables.value.Value.Immutable;
+
+
+# @Value.XXX usages
+
+@Value.Default
+@Value.Derived
+@Value.Immutable
+@Value.Immutable(builder = false)
+@Value.Lazy
+@Value.Modifiable
+@Value.Parameter
+@Value.Redacted
+@Value.Style(allParameters = true)
+@Value.Style(get = { "get*", "is*" })
+@Value.Style(get = { "get*", "is*" }, init = "with*")
+@Value.Style(of = "new", allParameters = true) // to have public constructor too
+@Value.Style(stagedBuilder = true)
+@Value.Style(strictBuilder = true)
+@Value.Style(typeModifiable = "ArchiveOrderLineDataBuilder", set = "*")
