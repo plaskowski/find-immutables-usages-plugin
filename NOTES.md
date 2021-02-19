@@ -1,7 +1,12 @@
 
 ## Regressions considerations
-
 - collection property has many setter methods in both builder and immutable impl.
+
+## Improvement ideas
+
+Related methods lookup:
+- exclude any inherited methods as we are interested only in generated methods
+  - how it fits "abstract class" case and default methods in super interface?
 
 ## Related resources
 
