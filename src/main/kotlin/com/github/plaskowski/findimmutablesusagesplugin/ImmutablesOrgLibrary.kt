@@ -42,6 +42,7 @@ class ImmutablesOrgGeneratedImplementationClass(private val implementationClass:
 
     fun findWitherMethodsForProperty(property: ImmutablesOrgProperty): List<PsiMethod> {
         return implementationClass.allMethods
+            .filter { psiMethod -> !psiMethod.parameterList.isEmpty }
             .filter { psiMethod -> psiMethod.name.contains(property.name, true) }
             .filter { psiMethod -> psiMethod != property.propertyGetterInDefinition }
     }

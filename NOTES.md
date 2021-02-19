@@ -1,4 +1,8 @@
 
+## Regressions considerations
+
+- collection property has many setter methods in both builder and immutable impl.
+
 ## Related resources
 
 - https://github.com/immutables/immutables/issues/904
