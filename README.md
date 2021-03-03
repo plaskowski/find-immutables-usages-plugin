@@ -12,6 +12,8 @@ This IntelliJ Plugin helps with [immutables.org](http://immutables.github.io/) b
 **Note** this is not an official immutables.org plugin (there was no official plugin as of Feb 2021).
 <!-- Plugin description end -->
 
+<img src="src/main/resources/META-INF/pluginIcon.svg" width="100" height="100">
+
 ![Example](example_screenshot.png)
 
 ## Installation
