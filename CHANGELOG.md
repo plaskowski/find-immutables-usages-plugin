@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 ### Added
+- Support @Value.Immutable on subclass
 
 ### Changed
 
