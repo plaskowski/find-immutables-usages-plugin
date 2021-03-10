@@ -1,6 +1,5 @@
 package com.github.plaskowski.findimmutablesusagesplugin
 
-import com.github.plaskowski.findimmutablesusagesplugin.ImmutablesOrgLibrary.isImmutablePropertyGetter
 import com.github.plaskowski.findimmutablesusagesplugin.ImmutablesOrgLibrary.parseImmutableProperty
 import com.intellij.find.findUsages.FindUsagesHandler
 import com.intellij.find.findUsages.FindUsagesHandlerFactory
@@ -23,7 +22,11 @@ class ImmutablePropertyFindUsagesHandlerFactory(private val project: Project) : 
     override fun canFindUsages(element: PsiElement): Boolean {
         val scanningInProgress = DumbService.isDumb(element.project)
         val isJavaElement = javaFindUsagesHandlerFactory.canFindUsages(element)
-        return !scanningInProgress && isJavaElement && isImmutablePropertyGetter(element)
+        return !scanningInProgress && isJavaElement && isReadMethod(element)
+    }
+
+    private fun isReadMethod(element: PsiElement): Boolean {
+        return element is PsiMethod && element.containingClass != null && element.parameterList.isEmpty
     }
 
     override fun createFindUsagesHandler(element: PsiElement, forHighlightUsages: Boolean): FindUsagesHandler? {

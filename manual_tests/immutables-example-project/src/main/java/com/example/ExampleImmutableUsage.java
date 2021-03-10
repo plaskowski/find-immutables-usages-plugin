@@ -4,7 +4,7 @@ public class ExampleImmutableUsage {
 
     public static void main(String[] args) {
         ImmutableSomeObject a = createObjectUsingBuilder();
-        ImmutableSomeObject b = createCopyUsingWithMethod(a);
+        SomeObject b = createCopyUsingWithMethod(a);
     }
 
     private static ImmutableSomeObject createObjectUsingBuilder() {

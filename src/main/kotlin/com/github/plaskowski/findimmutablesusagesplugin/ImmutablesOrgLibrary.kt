@@ -1,26 +1,25 @@
 package com.github.plaskowski.findimmutablesusagesplugin
 
 import com.intellij.psi.PsiClass
-import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiMethod
 import com.intellij.psi.impl.source.PsiClassReferenceType
 import com.intellij.psi.search.searches.ClassInheritorsSearch
 
 object ImmutablesOrgLibrary {
 
-    fun isImmutablePropertyGetter(element: PsiElement): Boolean {
-        return element is PsiMethod && element.containingClass != null &&
-            element.containingClass!!.getAnnotation("org.immutables.value.Value.Immutable") != null
-    }
-
     fun parseImmutableProperty(propertyGetterInDefinition: PsiMethod): ImmutablesOrgProperty {
         return ImmutablesOrgProperty(propertyGetterInDefinition)
     }
 
-    fun findImmutableImplementation(property: ImmutablesOrgProperty): ImmutablesOrgGeneratedImplementationClass? =
-        ClassInheritorsSearch.search(property.definitionClass, false)
-            .first { psiClass -> psiClass.getAnnotation("org.immutables.value.Generated") != null }
-            .let { ImmutablesOrgGeneratedImplementationClass(it) }
+    fun findImmutableImplementations(property: ImmutablesOrgProperty): Iterable<ImmutablesOrgGeneratedImplementationClass> {
+        val definitionClass = property.definitionClass
+        val candidates = listOf(definitionClass) + ClassInheritorsSearch.search(definitionClass, false)
+        return candidates
+            .filter { psiClass -> psiClass.getAnnotation("org.immutables.value.Value.Immutable") != null }
+            .flatMap { annotatedClass -> ClassInheritorsSearch.search(annotatedClass, false) }
+            .filter { subClass -> subClass.getAnnotation("org.immutables.value.Generated") != null }
+            .map { ImmutablesOrgGeneratedImplementationClass(it) }
+    }
 }
 
 class ImmutablesOrgProperty(val propertyGetterInDefinition: PsiMethod) {
