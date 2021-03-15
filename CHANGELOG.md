@@ -3,17 +3,9 @@
 # find-immutables-usages-plugin Changelog
 
 ## [Unreleased]
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
+- NoSuchElementException on value class without builder
 
-### Security
 ## [0.4.0]
 ### Added
 - Support @Value.Immutable on subclass
