@@ -35,7 +35,7 @@ class ImmutablesOrgGeneratedImplementationClass(private val implementationClass:
             .map { psiMethod -> psiMethod.returnType }
             .filterIsInstance<PsiClassReferenceType>()
             .map { psiClassReferenceType -> psiClassReferenceType.resolve() }
-            .first()
+            .firstOrNull()
             ?.let { ImmutablesOrgBuilderClass(it) }
     }
 
