@@ -4,11 +4,15 @@ import com.github.plaskowski.findimmutablesusagesplugin.ImmutablesOrgLibrary.fin
 import com.intellij.find.findUsages.JavaFindUsagesHandler
 import com.intellij.find.findUsages.JavaFindUsagesHandlerFactory
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiMethod
+import org.jetbrains.annotations.NotNull
 
 class ImmutablePropertyFindUsagesHandler(
-    private val property: ImmutablesOrgProperty,
+    element: PsiElement,
     factory: JavaFindUsagesHandlerFactory,
-) : JavaFindUsagesHandler(property.propertyGetterInDefinition, factory) {
+) : JavaFindUsagesHandler(element, factory) {
+
+    private val property = ImmutablesOrgLibrary.parseImmutableProperty(element as @NotNull PsiMethod)
 
     override fun getSecondaryElements(): Array<PsiElement> {
         return findImmutableImplementations(property)
@@ -18,8 +22,14 @@ class ImmutablePropertyFindUsagesHandler(
 
     private fun findModifiers(immutableClass: ImmutablesOrgGeneratedImplementationClass): List<PsiElement> {
         val builderClass = immutableClass.findBuilderClass()
-        val builderMethods = builderClass?.findMethodsRelatedToProperty(property).orEmpty()
+        val builderMethods = builderClass?.findMutatorsForProperty(property).orEmpty()
         val witherMethods = immutableClass.findWitherMethodsForProperty(property)
         return builderMethods + witherMethods
+    }
+
+    object Tester {
+        fun isValidCandidate(element: PsiElement): Boolean {
+            return element is PsiMethod && element.containingClass != null && element.parameterList.isEmpty
+        }
     }
 }

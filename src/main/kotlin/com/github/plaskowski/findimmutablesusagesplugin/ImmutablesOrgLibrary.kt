@@ -2,8 +2,11 @@ package com.github.plaskowski.findimmutablesusagesplugin
 
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiMethod
+import com.intellij.psi.PsiReferenceExpression
 import com.intellij.psi.impl.source.PsiClassReferenceType
 import com.intellij.psi.search.searches.ClassInheritorsSearch
+import com.intellij.psi.search.searches.MethodReferencesSearch
+import com.intellij.psi.util.parents
 
 object ImmutablesOrgLibrary {
 
@@ -19,6 +22,24 @@ object ImmutablesOrgLibrary {
             .flatMap { annotatedClass -> ClassInheritorsSearch.search(annotatedClass, false) }
             .filter { subClass -> subClass.getAnnotation("org.immutables.value.Generated") != null }
             .map { ImmutablesOrgGeneratedImplementationClass(it) }
+    }
+
+    fun isFactoryMethod(psiMethod: PsiMethod): Boolean {
+        return psiMethod.getAnnotation("org.immutables.builder.Builder.Factory") != null
+    }
+
+    fun findFactoryMethodBuilderClass(method: PsiMethod): Iterable<ImmutablesOrgBuilderClass> {
+        return MethodReferencesSearch.search(method)
+            .filterIsInstance<PsiReferenceExpression>()
+            .mapNotNull { psiReference -> findEnclosingClass(psiReference.element as PsiReferenceExpression) }
+            .filter { psiClass -> psiClass.getAnnotation("org.immutables.value.Generated") != null }
+            .map { ImmutablesOrgBuilderClass(it) }
+    }
+
+    private fun findEnclosingClass(referenceExpression: PsiReferenceExpression): PsiClass? {
+        return referenceExpression.parents
+            .filterIsInstance<PsiClass>()
+            .firstOrNull() as PsiClass?
     }
 }
 
@@ -49,9 +70,13 @@ class ImmutablesOrgGeneratedImplementationClass(private val implementationClass:
 
 class ImmutablesOrgBuilderClass(private val builderClass: PsiClass) {
 
-    fun findMethodsRelatedToProperty(property: ImmutablesOrgProperty): List<PsiMethod> {
+    fun findMutatorsForProperty(property: ImmutablesOrgProperty): List<PsiMethod> {
+        return findMutatorsForPropertyWithName(property.name)
+    }
+
+    fun findMutatorsForPropertyWithName(name: String): List<PsiMethod> {
         return builderClass.methods
-            ?.filter { psiMethod -> psiMethod.name.contains(property.name, true) }
-            .orEmpty()
+            .filter { psiMethod -> psiMethod.name.contains(name, true) }
+            .filter { psiMethod -> !psiMethod.parameterList.isEmpty }
     }
 }
