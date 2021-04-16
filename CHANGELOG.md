@@ -4,16 +4,8 @@
 
 ## [Unreleased]
 ### Added
+- Support @Builder.Factory method parameters
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 ## [0.4.1]
 ### Fixed
 - NoSuchElementException on value class without builder
