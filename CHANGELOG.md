@@ -5,6 +5,7 @@
 ## [Unreleased]
 ### Added
 - Compatibility with Intellij 2021.3
+- Updated dependencies along plugin template boilerplate
 
 ## [0.5.1]
 ### Added
