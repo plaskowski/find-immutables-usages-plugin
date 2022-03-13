@@ -3,6 +3,8 @@
 # find-immutables-usages-plugin Changelog
 
 ## [Unreleased]
+
+## [0.5.3]
 ### Added
 - Compatibility with Intellij 2021.3
 - Updated dependencies along plugin template boilerplate
@@ -11,7 +13,6 @@
 ### Added
 - Compatibility with Intellij 2021.1
 
-### Security
 ## [0.5.0]
 ### Added
 - Support @Builder.Factory method parameters
@@ -24,21 +25,11 @@
 ### Added
 - Support @Value.Immutable on subclass
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 ## [0.3.1]
 ### Fixed
 - Exclude unrelated methods like hasCode() by checking parameters count
 
 ## [0.3.0]
-
 ### Added
 - Enhance 'Find Usages' action on property getter in interface/abstract class
   that has `@Value.Immutable` to look also for builder methods and `with*()` methods
