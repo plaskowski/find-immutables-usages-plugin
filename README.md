@@ -7,7 +7,7 @@
 ## About
 
 <!-- Plugin description -->
-This IntelliJ Plugin helps with [immutables.org](http://immutables.github.io/) by extending 'Find Usages' for immutable property getter.
+This IntelliJ Plugin helps with [immutables.org](https://immutables.github.io/) by extending 'Find Usages' for immutable property getter.
 
 **Note** this is not an official immutables.org plugin (there was no official plugin as of Feb 2021).
 <!-- Plugin description end -->
