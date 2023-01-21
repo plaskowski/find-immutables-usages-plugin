@@ -3,6 +3,8 @@
 # find-immutables-usages-plugin Changelog
 
 ## [Unreleased]
+### Added
+- Compatibility with Intellij 2022.3
 
 ## [0.5.4]
 ### Added
